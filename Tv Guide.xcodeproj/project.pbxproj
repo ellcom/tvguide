@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B80C3171698EA1E00FAFBAA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B80C3161698EA1E00FAFBAA /* DetailViewController.m */; };
 		8BE7C52A1695FC5C00B812B0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE7C5291695FC5C00B812B0 /* UIKit.framework */; };
 		8BE7C52C1695FC5C00B812B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE7C52B1695FC5C00B812B0 /* Foundation.framework */; };
 		8BE7C52E1695FC5C00B812B0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE7C52D1695FC5C00B812B0 /* CoreGraphics.framework */; };
@@ -17,10 +18,14 @@
 		8BE7C53E1695FC5C00B812B0 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BE7C53D1695FC5C00B812B0 /* Default@2x.png */; };
 		8BE7C5401695FC5C00B812B0 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8BE7C53F1695FC5C00B812B0 /* Default-568h@2x.png */; };
 		8BE7C5431695FC5C00B812B0 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BE7C5411695FC5C00B812B0 /* MainStoryboard.storyboard */; };
-		8BE7C5461695FC5C00B812B0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C5451695FC5C00B812B0 /* ViewController.m */; };
+		8BE7C552169604EC00B812B0 /* ProgramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BE7C551169604EC00B812B0 /* ProgramViewController.m */; };
+		8BEF28AD16974A0900B7F5E3 /* SelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEF28AC16974A0900B7F5E3 /* SelectionViewController.m */; };
+		8BF5B822169895250068B630 /* channels.json in Resources */ = {isa = PBXBuildFile; fileRef = 8BF5B821169895250068B630 /* channels.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B80C3151698EA1E00FAFBAA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		8B80C3161698EA1E00FAFBAA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		8BE7C5251695FC5C00B812B0 /* Tv Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tv Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE7C5291695FC5C00B812B0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8BE7C52B1695FC5C00B812B0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,8 +40,11 @@
 		8BE7C53D1695FC5C00B812B0 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		8BE7C53F1695FC5C00B812B0 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8BE7C5421695FC5C00B812B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		8BE7C5441695FC5C00B812B0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8BE7C5451695FC5C00B812B0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8BE7C550169604EC00B812B0 /* ProgramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgramViewController.h; path = "Tv Guide/ProgramViewController.h"; sourceTree = "<group>"; };
+		8BE7C551169604EC00B812B0 /* ProgramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgramViewController.m; path = "Tv Guide/ProgramViewController.m"; sourceTree = "<group>"; };
+		8BEF28AB16974A0900B7F5E3 /* SelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionViewController.h; sourceTree = "<group>"; };
+		8BEF28AC16974A0900B7F5E3 /* SelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectionViewController.m; sourceTree = "<group>"; };
+		8BF5B821169895250068B630 /* channels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = channels.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B80C3141698E94500FAFBAA /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				8BE7C5381695FC5C00B812B0 /* AppDelegate.h */,
+				8BE7C5391695FC5C00B812B0 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		8B80C3181698EA2400FAFBAA /* Detail View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B80C3151698EA1E00FAFBAA /* DetailViewController.h */,
+				8B80C3161698EA1E00FAFBAA /* DetailViewController.m */,
+			);
+			name = "Detail View Controller";
+			sourceTree = "<group>";
+		};
 		8BE7C51A1695FC5C00B812B0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,12 +109,12 @@
 		8BE7C52F1695FC5C00B812B0 /* Tv Guide */ = {
 			isa = PBXGroup;
 			children = (
-				8BE7C5381695FC5C00B812B0 /* AppDelegate.h */,
-				8BE7C5391695FC5C00B812B0 /* AppDelegate.m */,
-				8BE7C5411695FC5C00B812B0 /* MainStoryboard.storyboard */,
-				8BE7C5441695FC5C00B812B0 /* ViewController.h */,
-				8BE7C5451695FC5C00B812B0 /* ViewController.m */,
+				8B80C3141698E94500FAFBAA /* App Delegate */,
+				8BE7C5531696050700B812B0 /* Program View Controller */,
+				8BEF28AF16974A1200B7F5E3 /* Selection View Controller */,
+				8B80C3181698EA2400FAFBAA /* Detail View Controller */,
 				8BE7C5301695FC5C00B812B0 /* Supporting Files */,
+				8BE7C5411695FC5C00B812B0 /* MainStoryboard.storyboard */,
 			);
 			path = "Tv Guide";
 			sourceTree = "<group>";
@@ -103,8 +129,28 @@
 				8BE7C53B1695FC5C00B812B0 /* Default.png */,
 				8BE7C53D1695FC5C00B812B0 /* Default@2x.png */,
 				8BE7C53F1695FC5C00B812B0 /* Default-568h@2x.png */,
+				8BF5B821169895250068B630 /* channels.json */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8BE7C5531696050700B812B0 /* Program View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BE7C550169604EC00B812B0 /* ProgramViewController.h */,
+				8BE7C551169604EC00B812B0 /* ProgramViewController.m */,
+			);
+			name = "Program View Controller";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		8BEF28AF16974A1200B7F5E3 /* Selection View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8BEF28AB16974A0900B7F5E3 /* SelectionViewController.h */,
+				8BEF28AC16974A0900B7F5E3 /* SelectionViewController.m */,
+			);
+			name = "Selection View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +209,7 @@
 				8BE7C53E1695FC5C00B812B0 /* Default@2x.png in Resources */,
 				8BE7C5401695FC5C00B812B0 /* Default-568h@2x.png in Resources */,
 				8BE7C5431695FC5C00B812B0 /* MainStoryboard.storyboard in Resources */,
+				8BF5B822169895250068B630 /* channels.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,7 +222,9 @@
 			files = (
 				8BE7C5361695FC5C00B812B0 /* main.m in Sources */,
 				8BE7C53A1695FC5C00B812B0 /* AppDelegate.m in Sources */,
-				8BE7C5461695FC5C00B812B0 /* ViewController.m in Sources */,
+				8BE7C552169604EC00B812B0 /* ProgramViewController.m in Sources */,
+				8BEF28AD16974A0900B7F5E3 /* SelectionViewController.m in Sources */,
+				8B80C3171698EA1E00FAFBAA /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +307,7 @@
 				GCC_PREFIX_HEADER = "Tv Guide/Tv Guide-Prefix.pch";
 				INFOPLIST_FILE = "Tv Guide/Tv Guide-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -269,6 +319,7 @@
 				GCC_PREFIX_HEADER = "Tv Guide/Tv Guide-Prefix.pch";
 				INFOPLIST_FILE = "Tv Guide/Tv Guide-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -292,6 +343,7 @@
 				8BE7C54B1695FC5C00B812B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -13,6 +13,20 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"selectedChannels"]== nil)
+    {
+        NSLog(@"Making ud channels dict for the first time.");
+        // Pull file from bundle
+        NSString *jsonFileLocation = [[NSBundle mainBundle] pathForResource:@"channels" ofType:@"json"];
+        NSData *data = [[NSData alloc] initWithContentsOfFile:jsonFileLocation];
+        NSArray *channels = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:nil];
+        
+        NSDictionary *appDefaults = [NSDictionary dictionaryWithObjects:[NSArray arrayWithObjects:channels, nil]
+                                                            forKeys:[NSArray arrayWithObjects:@"selectedChannels", nil]];
+        
+        [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     return YES;
 }
 							
