@@ -13,6 +13,8 @@
 @property(strong,nonatomic)NSDictionary *selectedChannelNumbersDict;
 @property(strong,nonatomic)NSArray *channelsArray;
 
+-(NSArray*)rebuiltSelectedChannelsArray;
+
 @end
 
 @implementation SelectionViewController{}
