@@ -13,13 +13,13 @@
 @property (strong, nonatomic) NSArray* tvChannels;
 @property (strong, nonatomic) NSDictionary* channelData;
 
-
 @property (assign, nonatomic) BOOL jsonDownloadInProgress;
 
 @end
 
-@implementation ProgramViewController
+@implementation ProgramViewController{}
 
+#pragma mark - LifeCycle
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -45,7 +45,7 @@
     [self setJsonDownloadInProgress:NO];
     
     [self.refreshControl beginRefreshing];
-    [self performSelector:@selector(refreshView)];
+    [self channelDataNeedsDownload];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -60,9 +60,7 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)refreshView{
-    [self downloadChannelData];
-}
+#pragma mark - Dictionary and NSArray Methods
 
 -(NSArray*)tvChannels
 {
@@ -73,7 +71,7 @@
     return _tvChannels;
 }
 
--(void)downloadChannelData{
+-(void)channelDataNeedsDownload{
     
     if ([self jsonDownloadInProgress] == NO) {
         
@@ -173,45 +171,6 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -224,6 +183,8 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+#pragma mark - Storyboard segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     NSLog(@"Prepare for segue: %@", [segue identifier]);
@@ -242,7 +203,6 @@
         [dvc setProgramPointer:indexPath.row];
     }
 }
-
 
 - (IBAction)done:(UIStoryboardSegue *)segue
 {

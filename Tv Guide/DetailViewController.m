@@ -14,7 +14,9 @@
 
 @end
 
-@implementation DetailViewController
+@implementation DetailViewController{}
+
+#pragma mark - LifeCycle
 
 - (void)viewDidLoad
 {
@@ -32,6 +34,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Program details init
 
 - (NSDictionary*)programDetails
 {
@@ -85,15 +89,11 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
     return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
     return 1;
 }
 
