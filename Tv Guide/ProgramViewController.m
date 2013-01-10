@@ -15,6 +15,8 @@
 
 @property (assign, nonatomic) BOOL jsonDownloadInProgress;
 
+-(void)channelDataNeedsDownload;
+
 @end
 
 @implementation ProgramViewController{}
