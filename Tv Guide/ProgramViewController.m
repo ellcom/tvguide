@@ -217,7 +217,7 @@
     [self.tableView setContentOffset:newOffset animated:YES];
     
     [self.refreshControl beginRefreshing];
-    [self performSelector:@selector(refreshView)];
+    [self channelDataNeedsDownload];
 }
 
 @end
