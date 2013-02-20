@@ -1,7 +1,7 @@
 Tv Guide
 =======
 
-This is a simple Virgin Media TV guide, built with iOS6 and storyboards. Using the vir.gin.nl api for the data.
+This is a simple Virgin Media TV guide, built with iOS6 and storyboards. Using the <del>vir.gin.nl</del> virgintvguide.mcore.com api for the data.
 
 Enjoy!
 
