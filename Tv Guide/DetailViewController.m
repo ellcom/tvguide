@@ -42,7 +42,7 @@
     if(_programDetails == nil){
     
         NSString* programID = [[[self.channelData objectForKey:@"programmes"] objectAtIndex:self.programPointer] objectForKey:@"p_crid"];
-        NSString* contentURL = [NSString stringWithFormat:@"http://player.vir.gin.nl/mpag/api/v1/tv/getProgramDetails?id=%@",programID];
+        NSString* contentURL = [NSString stringWithFormat:@"http://virgintvguide.mcore.com/mpag/api/v1/tv/getProgramDetails?id=%@",programID];
         
         NSURL *url = [NSURL URLWithString:contentURL];
         
