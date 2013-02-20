@@ -85,7 +85,7 @@
             [channelNumbers addObject:[channel objectForKey:@"channelNumber"]];
         NSString* channels = [channelNumbers componentsJoinedByString:@":"];
 
-        NSString* contentURL = [NSString stringWithFormat:@"http://player.vir.gin.nl/mpag/api/v1/tv/getNowNextForChannels?region=%@&startTime=%@&channels=%@",region,startTime,channels];
+        NSString* contentURL = [NSString stringWithFormat:@"http://virgintvguide.mcore.com/mpag/api/v1/tv/getNowNextForChannels?region=%@&startTime=%@&channels=%@",region,startTime,channels];
         
         NSURL *url = [NSURL URLWithString:contentURL];
         
