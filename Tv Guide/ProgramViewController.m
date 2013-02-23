@@ -39,7 +39,7 @@
     
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to Reload"];
     [refreshControl addTarget:self
-                       action:@selector(refreshView)
+                       action:@selector(channelDataNeedsDownload)
              forControlEvents:UIControlEventValueChanged];
     
     self.refreshControl = refreshControl;
